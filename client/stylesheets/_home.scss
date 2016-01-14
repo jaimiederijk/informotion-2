@@ -1,16 +1,3 @@
-* {
-  box-sizing: border-box;
-  font-family: $body-font;
-}
-
-html,
-body,
-ul,
-ol {
-	margin: 0;
-	padding: 0;
-}
-
 .home {
 	
 	margin: 0 32px 0 32px;
@@ -18,9 +5,10 @@ ol {
 	.kaart-container {
 		width: 100%;
 		float: left;
+		height: 500px;
 
 		.kaart-wrapper {
-			width: 50%;
+			width: 40%;
 			float: left;
 			overflow: hidden;
 
@@ -28,15 +16,18 @@ ol {
 				width: 100%;
 			}
 		}
-	}
-	
-	.grafiekvenster-container {
-		width: 100%;
-		float: left;
 
-		.grafiekvenster {
-			height: 64px;
-			background-color: $venster-white-smoke;
+		.conclusie-wrapper {
+			display: table;
+			width: 20%;
+			height: 100%;
+			float: left;
+			padding: 0 12px 0 12px;
+
+			.conclusie-tekst {
+				display: table-cell;
+  				vertical-align: middle;
+			}
 		}
 	}
 }

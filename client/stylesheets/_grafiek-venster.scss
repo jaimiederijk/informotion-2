@@ -1,0 +1,20 @@
+.grafiekvenster-container {
+	width: 100%;
+	float: left;
+
+	.grafiekvenster {
+		height: 264px;
+		background-color: $venster-white-smoke;
+		padding: 0 0 0 32px;
+
+		.stadsdeel-title {
+			float: left;
+			width: 100%;
+		}
+
+		.grafiek-title {
+			width: 50%;
+			float: left;
+		}
+	}
+}

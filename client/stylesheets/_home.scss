@@ -18,10 +18,25 @@ ol {
 	.kaart-container {
 		width: 100%;
 		float: left;
+
+		.kaart-wrapper {
+			width: 50%;
+			float: left;
+			overflow: hidden;
+
+			.images-kaart {
+				width: 100%;
+			}
+		}
 	}
 	
 	.grafiekvenster-container {
 		width: 100%;
 		float: left;
+
+		.grafiekvenster {
+			height: 64px;
+			background-color: $venster-white-smoke;
+		}
 	}
 }

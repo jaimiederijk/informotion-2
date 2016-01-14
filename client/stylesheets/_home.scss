@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  font-family: $body-font;
+}
+
+html,
+body,
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+}
+
+.home {
+	
+	margin: 0 32px 0 32px;
+
+	.kaart-container {
+		width: 100%;
+		float: left;
+	}
+	
+	.grafiekvenster-container {
+		width: 100%;
+		float: left;
+	}
+}

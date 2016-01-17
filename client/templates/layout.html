@@ -1,6 +1,30 @@
 <template name="layout">
 	<header class="header">
-		<h1 class="header-title">Titel van de website</h1>
+		<div class="header-wrap">
+			<div class="header-content">
+				<div class="select-holder">
+					<select class="select-kaart-button">
+						<option value="">Selecteer kaart links</option>
+						<option value="15min">Kaart 1</option>
+						<option value="20min">Kaart 2</option>
+						<option value="20min">Kaart 3</option>
+					</select>
+				</div>
+			</div>
+			<div class="header-content">
+				<h1 class="header-title">Amsterdam</h1>
+			</div>
+			<div class="header-content">
+				<div class="select-holder">
+					<select class="select-kaart-button">
+						<option value="">Selecteer kaart rechts</option>
+						<option value="15min">Kaart 4</option>
+						<option value="20min">Kaart 5</option>
+						<option value="20min">Kaart 6</option>
+					</select>
+				</div>
+			</div>
+		</div>
 	</header>
 	<div class="overlay">
 		<!-- {{> yield}} -->

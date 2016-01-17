@@ -19,13 +19,32 @@
 				color: #fff;
 			}
 
+			.kaart-img-wrap.right {
+				justify-content: flex-start;
+			}
+
 			.kaart-img-wrap {
 				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
 
 				.image-kaart {
-					display: block;
+					// display: block;
 					width: 500px;
-					margin: 0 auto;
+					// margin: 0 auto;
+				}
+
+				.material-icons.white { 
+					color: #fff; 
+				}
+
+				.material-icons.left { 
+					padding-left: 32px; 
+				}
+
+				.material-icons.right { 
+					padding-right: 32px; 
 				}
 			}
 		}
@@ -38,11 +57,11 @@
 			width: 350px;
 			height: 100%;
 			padding: 32px;
-			margin: 32px;
+			margin: 91px 32px 0 32px;
 
 			.conclusie-titel {
 				text-align: center;
-				margin: 0 0 12px 0;
+				margin: 0 0 18px 0;
 				color: #fff;
 			}
 

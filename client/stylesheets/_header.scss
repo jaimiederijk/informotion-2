@@ -1,11 +1,54 @@
 .header {
 	background-color: $header-grijs;
 	height: 64px;
-	
-	.header-title {
-		text-align: center;
-		margin: 0;
-		line-height: 64px;
-		color: #fff;
+	padding: 0 32px 0 32px;
+	width: 100%;
+
+	.header-wrap {
+		height: 64px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+
+		.header-content:nth-child(2n) {
+			width: 318px;
+		}
+
+		.header-content {
+			width: 100%;
+
+			.select-holder {
+				background-color: transparent;
+				color: #fff;
+				width: 160px;
+				height: 36px;
+				display: block;
+				margin: 0 auto;
+				text-align: center;
+				outline: none;
+				border: 2px solid $conclusie-dimgray;
+				border-radius: 0;
+				-webkit-appearance: none;
+			}
+			
+			.select-kaart-button {
+				background-color: transparent;
+				color: #fff;
+				width: 100%;
+				border: none;
+				height: 100%;
+				position: relative;
+				outline: none;
+			}
+
+			.header-title {
+				width: 318px;
+				display: block;
+				margin: 0 auto;
+				text-align: center;
+				color: #fff;
+			}
+		}
 	}
 }

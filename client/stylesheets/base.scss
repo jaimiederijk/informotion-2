@@ -4,8 +4,11 @@
 	$body-font: 'Open Sans', sans-serif;
 
 	// Kleuren
-	$header-grijs: #eaebec;
+	$header-grijs: #3f3f3f;
 	$venster-white-smoke: #f4f5f6;
+	$body-darkslategray: #515151;
+	$conclusie-dimgray: #656666;
+
 
 // Imports:
 
@@ -16,4 +19,3 @@
 	@import 'main';
 	@import 'home';
 	@import 'header';
-	@import 'grafiek-venster';

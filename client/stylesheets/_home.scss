@@ -2,35 +2,90 @@
 	
 	margin: 0 32px 0 32px;
 
-	.kaart-container {
+	.container {
+		display: flex;
+		flex-direction: row;
 		width: 100%;
-		float: left;
-		height: 500px;
+		height: 100%;
 
 		.kaart-wrapper {
-			width: 40%;
-			float: left;
+			width: 100%;
 			overflow: hidden;
+			margin: 32px 0 0 0;
 
 			.titel-kaart {
 				text-align: center;
+				margin: 0 0 32px 0;
+				color: #fff;
 			}
 
-			.images-kaart {
+			.kaart-img-wrap {
 				width: 100%;
+
+				.image-kaart {
+					display: block;
+					width: 500px;
+					margin: 0 auto;
+				}
 			}
 		}
 
 		.conclusie-wrapper {
-			display: table;
-			width: 20%;
+			display: flex;
+  			flex-direction: column;
+  			align-content: space-between;
+  			background-color: $conclusie-dimgray;
+			width: 350px;
 			height: 100%;
-			float: left;
-			padding: 0 12px 0 12px;
+			padding: 32px;
+			margin: 32px;
+
+			.conclusie-titel {
+				text-align: center;
+				margin: 0 0 12px 0;
+				color: #fff;
+			}
 
 			.conclusie-tekst {
-				display: table-cell;
-  				vertical-align: middle;
+  				height: 100%;
+  				margin: 0 0 32px 0;
+  				color: #fff;
+			}
+
+			.conclusie-button-wrap > input:first-of-type {
+				margin: 0 0 12px 0;
+			}
+
+			.conclusie-button-wrap {
+  				display: flex;
+  				flex-direction: column;
+  				align-content: space-around;
+
+  				.grafiek-button {
+  					width: 190px;
+  					color: $header-grijs;
+  					background: transparent;
+  					border: 2px solid $header-grijs;
+  					height: 36px;
+  					outline: none;
+  				}
+
+  				.grafiek-button-active {
+  					width: 190px;
+  					background: $header-grijs;
+  					border: 1px solid $header-grijs;
+  					color: $conclusie-dimgray;
+  					height: 36px;
+  					outline: none;
+  				}
+
+  				.grafiek-button:hover {
+  					background: $header-grijs;
+  					border: 1px solid $header-grijs;
+  					color: $conclusie-dimgray;
+  					cursor: pointer; 
+  					cursor: hand;
+  				}
 			}
 		}
 	}

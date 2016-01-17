@@ -3,6 +3,7 @@ Meteor.subscribe('chartdata', function() {
 	if (Chartdata.find().count()<=0) {
 		//repeat this part for more chartdata
 		Chartdata.insert({
+			name:"hotelData",
 			hotelData : {
 				"weteringenschans" : [
 				    {
@@ -149,6 +150,7 @@ Meteor.subscribe('chartdata', function() {
 			}
 		})
 		Chartdata.insert({
+			name:"schoonheidsgraden",
 			schoonheidsgraden: [
 				{
 					citypart:"weteringenschans",

@@ -134,9 +134,18 @@
 				fill: #fff;
 			}
 
+			#balk > path {
+				stroke: #fff;
+				stroke-width: 2px;
+			}
+
+			#balk > g line {
+				stroke: #fff;
+				stroke-width: 2px;
+			}
+
 			#balk {
 				fill: none;
-				stroke: #fff;
 				shape-rendering: crispEdges;
 			}
 		}

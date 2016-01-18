@@ -77,7 +77,7 @@ Meteor.subscribe('chartdata', function() {
 			.enter() // ga data in 
 			.append('rect') // maak rechthoeken
 				.attr('width', function(d) { return widthScale(d.avg); }) // breedte balk = functie schaal van breedte 
-				.attr('height', 20) // hoogste balk vaste waarde
+				.attr('height', 16) // hoogste balk vaste waarde
 				.attr('fill', '#656666')
 				.attr('y' , function(d, i) { return i * 21 }) // verdeel balken verticaal
 				.attr('id', function (d, i) { return "bar" + (i + 1); }); // maak een id voor elke rechthoek en tel ze op 'bar1, bar2 enzo'
@@ -89,7 +89,7 @@ Meteor.subscribe('chartdata', function() {
 				.append('text')
 				.text(function(d) { return d.name }) // tekst = functie return datum
 				.attr('y', function(d, i){ return i * 21 } ) // index van date 21 keer verticaal verdelen.
-				.attr('transform', 'translate(-12, 14.5)')
+				.attr('transform', 'translate(-12, 12)')
 				.style("text-anchor","end") 
             	.attr("startOffset","100%"); // margins bij de datums zodat ze netjes in midden van balk staan.
 

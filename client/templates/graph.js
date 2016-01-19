@@ -42,6 +42,23 @@ Meteor.subscribe('chartdata', function() {
 	    	avgCityPart = avgCityPart/cityPartData.length;
 	    	avgData.push({"avg":avgCityPart,"name":part});
 	    };
+	    //kaart kleuren
+	    chartColors=["#19336b","#6677gc","#99a4bd","#33497b","#ccd2de"]
+	    for (var r = avgData.length - 1; r >= 0; r--) {
+	    	var color;
+	    	if (avgData[r].avg>9) {
+	    		color=chartColors[0]
+	    	} else if(avgData[r].avg>8) {
+	    		color=chartColors[1]
+	    	} else if(avgData[r].avg>7) {
+	    		color=chartColors[2]
+	    	} else if(avgData[r].avg>6) {
+	    		color=chartColors[3]
+	    	} else {
+	    		color=chartColors[4]
+	    	}
+	    	$(".left-map #"+avgData[r].name+" circle").css("fill",color)
+	    };
 
 	    // D3 datavisualisatie
 		var width = 500;

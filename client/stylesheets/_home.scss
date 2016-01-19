@@ -74,9 +74,9 @@
 			}
 
 			.conclusie-tekst {
-  				height: 100%;
-  				width: 180px;
-  				margin: 0 0 12px 0;
+				height: 100%;
+				width: 180px;
+				margin: 0 0 12px 0;
   				color: #fff;
 			}
 
@@ -119,8 +119,34 @@
 
 	.graph-container {
 		#graph {
+			
 			svg {
 				width: 50%;
+			}
+
+			text {
+				fill: #fff;
+				text-transform: uppercase;
+				font-size: 12px;
+			}
+
+			#balk > g > text {
+				fill: #fff;
+			}
+
+			#balk > path {
+				stroke: #fff;
+				stroke-width: 2px;
+			}
+
+			#balk > g line {
+				stroke: #fff;
+				stroke-width: 2px;
+			}
+
+			#balk {
+				fill: none;
+				shape-rendering: crispEdges;
 			}
 		}
 	}

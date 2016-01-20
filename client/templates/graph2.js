@@ -1,11 +1,11 @@
-Template.graph.rendered = function() {
+Template.graph2.rendered = function() {
   this.autorun(function() {
     Meteor.subscribe('chartdata', function() {
 	
 
-	    var graphData = Chartdata.findOne({name:"schoonheidsgraden"}).schoonheidsgraden
+	    var graphData = Chartdata.findOne({name:"hotelData"}).hotelData
 		function barGraph () {
-			//debugger
+			
 				
 			var width = 1000,
 			// graphData = Chartdata.findOne({name:"schoonheidsgraden"}).schoonheidsgraden,
@@ -18,36 +18,28 @@ Template.graph.rendered = function() {
 			var avgData =[];
 
 			for (var i = 0; i < cityParts.length; i++) {
-				var avgCityPart=0;
-				var part = cityParts[i];
-				var cityPartData = graphData[i].subparts;
-
-				for (var t = 0; t < cityPartData.length; t++) {
-					
-					
-					avgCityPart+=cityPartData[t].grade;
-				};
 				
-				avgCityPart = avgCityPart/cityPartData.length;
-				avgData.push({"avg":avgCityPart,"name":part});
+				var part = cityParts[i];
+
+				avgData.push({"avg":graphData[part][1].prijs,"name":part});
 			};
 
 		    //kaart kleuren["#CCD2DE","#99A4BD","#66779C","#33497B","#001C5B"]
-		    chartColors=mapColors.blue;//["#001C5B","#33497B","#66779C","#99A4BD","#CCD2DE"]
+		    chartColors=mapColors.red;//["#5B0000","#7C3333","#9D6666","#BE9999","#DECCCC"]
 		    for (var r = avgData.length - 1; r >= 0; r--) {
 		    	var color;
-		    	if (avgData[r].avg>9) {
+		    	if (avgData[r].avg>225) {
 		    		color=chartColors[0]
-		    	} else if(avgData[r].avg>8) {
+		    	} else if(avgData[r].avg>200) {
 		    		color=chartColors[1]
-		    	} else if(avgData[r].avg>7) {
+		    	} else if(avgData[r].avg>175) {
 		    		color=chartColors[2]
-		    	} else if(avgData[r].avg>6) {
+		    	} else if(avgData[r].avg>150) {
 		    		color=chartColors[3]
 		    	} else {
 		    		color=chartColors[4]
 		    	}
-		    	$(".left-map ."+avgData[r].name+" circle").css("fill",color)
+		    	$(".right-map ."+avgData[r].name+" circle").css("fill",color)
 		    };
 
 			avgData.sort(function(a,b){
@@ -61,7 +53,7 @@ Template.graph.rendered = function() {
 
 			// maak een schaal voor de breedte
 			var widthScale = d3.scale.linear()
-				.domain([0, 10]) // nul is laagst en kd kan niet hoger dan 10
+				.domain([0, d3.max(avgData, function(d){return d.avg})]) // nul is laagst en kd kan niet hoger dan 10
 				.range([0, width]); // vertaal dit in de range van je breedte
 
 			var heightScale = d3.scale.linear()
@@ -74,7 +66,7 @@ Template.graph.rendered = function() {
 				.scale(widthScale); // gebruik de schaal breedte voor de as
 
 			// selecteer lege svg en maak vaste hoogtes en breetes
-			var canvas = d3.select('#graph').append('svg')
+			var canvas = d3.select('#graph2').append('svg')
 				.attr('width', width) // 1000
 				.attr('height', height) // 1000
 				.append('g') // groep
@@ -114,7 +106,7 @@ Template.graph.rendered = function() {
 	
   });
 };
-Template.graph.helpers({
+Template.graph2.helpers({
 	chart:function(){
 	}
 });

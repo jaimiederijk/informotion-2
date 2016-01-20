@@ -104,7 +104,7 @@ Meteor.subscribe('chartdata', function() {
 				      "soortprijs":"duurste"
 				    }
 				  ],
-				"kadijken" : [
+				"oosterlijke-eilanden" : [
 				    {
 				      "prijs":10,
 				      "soortprijs":"goedkoopste"
@@ -333,34 +333,34 @@ Meteor.subscribe('chartdata', function() {
 						}
 					]
 				},{
-					citypart:"kadijken",
+					citypart:"oosterlijke-eilanden",
 					subparts:[
 						{	
-							part:"kadijken_deel1",
+							part:"oosterlijke-eilanden_deel1",
 							grade:0
 						},
 						{	
-							part:"kadijken_deel2",
+							part:"oosterlijke-eilanden_deel2",
 							grade:9.1
 						},
 						{	
-							part:"kadijken_deel3",
+							part:"oosterlijke-eilanden_deel3",
 							grade:8.9
 						},
 						{	
-							part:"kadijken_deel4",
+							part:"oosterlijke-eilanden_deel4",
 							grade:0
 						},
 						{	
-							part:"kadijken_deel5",
+							part:"oosterlijke-eilanden_deel5",
 							grade:8.9
 						},	
 						{
-							part:"kadijken_deel6",
+							part:"oosterlijke-eilanden_deel6",
 							grade:8.3
 						},
 						{	
-							part:"kadijken_deel7",
+							part:"oosterlijke-eilanden_deel7",
 							grade:9.2
 						}
 					]

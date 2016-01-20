@@ -36,10 +36,12 @@ Template.graph.rendered = function() {
 		    chartColors=mapColors.blue;//["#001C5B","#33497B","#66779C","#99A4BD","#CCD2DE"]
 		    for (var r = avgData.length - 1; r >= 0; r--) {
 		    	var color;
+		    	var name=avgData[r].name;
+
 		    	if (avgData[r].avg>9) {
-		    		color=chartColors[0]
+		    		color=chartColors[0];
 		    	} else if(avgData[r].avg>8) {
-		    		color=chartColors[1]
+		    		color=chartColors[1];
 		    	} else if(avgData[r].avg>7) {
 		    		color=chartColors[2]
 		    	} else if(avgData[r].avg>6) {
@@ -47,6 +49,7 @@ Template.graph.rendered = function() {
 		    	} else {
 		    		color=chartColors[4]
 		    	}
+		    	mapColors.chartBlue[name]=color;
 		    	$(".left-map ."+avgData[r].name+" circle").css("fill",color)
 		    };
 

@@ -28,6 +28,8 @@ Template.graph2.rendered = function() {
 		    chartColors=mapColors.red;//["#5B0000","#7C3333","#9D6666","#BE9999","#DECCCC"]
 		    for (var r = avgData.length - 1; r >= 0; r--) {
 		    	var color;
+		    	var name=avgData[r].name;
+
 		    	if (avgData[r].avg>225) {
 		    		color=chartColors[0]
 		    	} else if(avgData[r].avg>200) {
@@ -39,6 +41,8 @@ Template.graph2.rendered = function() {
 		    	} else {
 		    		color=chartColors[4]
 		    	}
+
+		    	mapColors.chartRed[name]=color;
 		    	$(".right-map ."+avgData[r].name+" circle").css("fill",color)
 		    };
 

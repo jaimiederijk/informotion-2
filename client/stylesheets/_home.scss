@@ -130,6 +130,10 @@
 				font-size: 12px;
 			}
 
+			.left-yaxis > g text {
+				display: none;
+			}
+
 			#balk > g > text {
 				fill: #fff;
 			}

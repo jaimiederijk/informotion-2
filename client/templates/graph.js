@@ -57,6 +57,7 @@ Meteor.subscribe('chartdata', function() {
 	    	avgCityPart = avgCityPart/cityPartData.length;
 	    	avgData.push({"avg":avgCityPart,"name":part});
 	    };
+	    
 	    //kaart kleuren
 	    chartColors=["#19336b","#6677gc","#99a4bd","#33497b","#ccd2de"]
 	    for (var r = avgData.length - 1; r >= 0; r--) {
@@ -83,6 +84,7 @@ Meteor.subscribe('chartdata', function() {
 		// D3 datavisualisatie
 		var width = 250;
 		var height = 500;
+		var y = d3.scale.linear().range([height, 0]);
 
 		// maak een schaal voor de breedte
 		var widthScale = d3.scale.linear()
@@ -92,6 +94,10 @@ Meteor.subscribe('chartdata', function() {
 		var heightScale = d3.scale.linear()
 			.domain([0, 10])
 			.range([0, height]);
+
+		// var yAxis = d3.svg.axis()
+  		//		.scale(y)
+  		//		.orient("left");
 
 		// maak een as met de schaal voor de breedte
 		var axis = d3.svg.axis()
@@ -123,9 +129,15 @@ Meteor.subscribe('chartdata', function() {
 				.append('text')
 				.text(function(d) { return d.name }) // tekst = functie return datum
 				.attr('y', function(d, i){ return i * 21 } ) // index van date 21 keer verticaal verdelen.
-				.attr('transform', 'translate(-12, 12)')
+				.attr('transform', 'translate(-30, 12)')
 				.style("text-anchor","end") 
             	.attr("startOffset","100%"); // margins bij de datums zodat ze netjes in midden van balk staan.
+
+		// canvas.append('g')
+		// 	.attr('transform', 'translate(-12,0)')
+		// 	.attr('fill', 'white')
+		// 	.attr('class', 'left-yaxis')
+		// 	.call(yAxis);
 
 		// maak nieuwe groep aan voor de as
 		canvas.append('g')

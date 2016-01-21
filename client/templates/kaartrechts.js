@@ -1,10 +1,25 @@
+Template.kaartr.rendered = function() {
+  this.autorun(function() {
+  	var dot = document.querySelectorAll('.right-map svg g circle');
+
+	var kaart = new TimelineMax()
+		.staggerFrom(dot , 0.006 , { 
+			scale:0 , 
+			transformOrigin: "left", 
+			ease: Power2.easeOut, 
+			y: 0},
+
+		0.006);
+  })
+};
+
 Template.kaartr.helpers({
 
 });
 Template.kaartr.events({
 	'mouseover .map_svg>g' :function  (event,template) {
 		$(".graph-container rect").attr("style", "fill: #656666;")
-		$(".map_svg> g").attr("style", "fill-opacity: 0.4;")
+		$(".map_svg> g").attr("style", "fill-opacity: 0.5;")
 
 		$("."+event.currentTarget.classList[0]).attr("style", "fill-opacity: 1;")
 		assignGraphColor(event)

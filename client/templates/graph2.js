@@ -66,7 +66,7 @@ Template.graph2.rendered = function() {
 
 			// maak een as met de schaal voor de breedte
 			var axis = d3.svg.axis()
-				.ticks(10) 
+				.ticks(5) 
 				.scale(widthScale); // gebruik de schaal breedte voor de as
 
 			// selecteer lege svg en maak vaste hoogtes en breetes

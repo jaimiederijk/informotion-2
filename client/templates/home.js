@@ -4,9 +4,34 @@ Template.home.rendered = function() {
   	Session.set("leftMap", "kaartl");
   	Session.set("rightGraph", "graph2");
   	Session.set("leftGraph", "graph");
+
     // Session.set("stadsdeelL", "");
     // Session.set("stadsdeelR", "");
     // Session.set("stadsdeel3", "");
+
+
+    var conclusie = document.querySelector('.conclusie-wrapper');
+    var pijll = document.querySelector('.material-icons.white.left');
+    var pijlr = document.querySelector('.material-icons.white.right');
+
+    var conclusietl = new TimelineMax()
+      .from(conclusie, 1, {
+        scale: 0,
+        opacity:0,
+        ease: Power1.easeOut,
+        y: 500
+      })
+      .from(pijll, 1, {
+        opacity:0, 
+        ease: Power2.easeOut, 
+        x:50
+      }, 'label')
+      .from(pijlr, 1, {
+        opacity:0, 
+        ease: Power2.easeOut, 
+        x:5-50
+      }, 'label');
+
   })
 };
 Template.home.helpers({

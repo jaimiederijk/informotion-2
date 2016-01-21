@@ -4,7 +4,7 @@ Template.kaartr.helpers({
 Template.kaartr.events({
 	'mouseover .map_svg>g' :function  (event,template) {
 		$(".graph-container rect").attr("style", "fill: #656666;")
-		$(".map_svg> g").attr("style", "fill-opacity: 0.4;")
+		$(".map_svg> g").attr("style", "fill-opacity: 0.5;")
 
 		$("."+event.currentTarget.classList[0]).attr("style", "fill-opacity: 1;")
 		assignGraphColor(event)

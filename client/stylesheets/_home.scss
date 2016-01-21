@@ -131,12 +131,20 @@
 
 	.graph-container {
 
+		margin-top: 12px;
+
+		.graph-wrapper {
+
+		}
+
 		#graph,#graph2,#graph3 {
 			width: 50%;
 			float: left;
 			
 			svg {
-				width: 100%;
+				width: 500px;
+    			display: block;
+    			margin: auto;
 			}
 			
 			text {

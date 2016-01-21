@@ -8,6 +8,18 @@
 		width: 100%;
 		height: 100%;
 
+		.material-icon-wrap {
+			display: flex;
+			align-items: center;
+			height: 280px;
+			margin-top: 91px;
+			width: auto;
+		}
+
+		.material-icons.white { 
+			color: #fff; 
+		}
+
 		.kaart-wrapper {
 			width: 100%;
 			overflow: hidden;
@@ -23,36 +35,28 @@
 				color: #fff;
 			}
 
-			.kaart-img-wrap.right-map {
-				justify-content: flex-start;
-			}
+			// .kaart-img-wrap.right-map {
+			// 	justify-content: flex-start;
+			// }
 
-			.kaart-img-wrap.left-map {
+			// .kaart-img-wrap.left-map {
+				
+			// }
 
-			}
+			// .kaart-img-wrap.third-map {
+			// 	justify-content: flex-start;
+			// }
 
 			.kaart-img-wrap {
 				width: 100%;
 				display: flex;
 				align-items: center;
-				justify-content: flex-end;
+				justify-content: center;
 
 				.image-kaart {
 					// display: block;
 					width: 500px;
 					// margin: 0 auto;
-				}
-
-				.material-icons.white { 
-					color: #fff; 
-				}
-
-				.material-icons.left { 
-					padding-left: 12px; 
-				}
-
-				.material-icons.right { 
-					padding-right: 12px; 
 				}
 
 				.selected {
@@ -126,17 +130,10 @@
 	}
 
 	.graph-container {
-		
-		#graph {
-			width:50%;
-			float:left;
-		}
-		#graph2 {
-			width:50%;
-			float:right;
-		}
 
 		#graph,#graph2,#graph3 {
+			width: 50%;
+			float: left;
 			
 			svg {
 				width: 100%;

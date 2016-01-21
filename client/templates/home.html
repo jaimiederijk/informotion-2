@@ -2,18 +2,24 @@
 	<div class="home">
 		<div class="container">
 			{{> Template.dynamic template=whichOneLeft}}
+			<div class="material-icon-wrap">
+				<i class="material-icons white left">arrow_back</i>
+			</div>
 			<div class="conclusie-wrapper">
 				<div class="conclusie-tekst">
 					<h3 class="conclusie-titel">Deze website</h3>
 					<p class="conclusie-body-tekst">Een schoonheidsgraad is een cijfer dat door de inwoners gegeven word aan de gemeente over de tevredeheid met de vuilnisdienst. Laag cijfer toont ontevrede en een hoog cijfer betekent tevrede bewoners.</p>
-					</div>
-					<div class="conclusie-button-wrap">
-						<input class="grafiek-button-active" type="submit" value="Bar chart">
-					</div>
-					<div class="conclusie-button-wrap">
-						<input class="grafiek-button" type="submit" value="Line chart">
-					</div>
 				</div>
+				<div class="conclusie-button-wrap">
+					<input class="grafiek-button-active" type="submit" value="Bar chart">
+				</div>
+				<div class="conclusie-button-wrap">
+					<input class="grafiek-button" type="submit" value="Line chart">
+				</div>
+			</div>
+			<div class="material-icon-wrap">
+				<i class="material-icons white right">arrow_forward</i>
+			</div>
 			{{> Template.dynamic template=whichOneRight}}
 		</div>
 		<div class="graph-container">

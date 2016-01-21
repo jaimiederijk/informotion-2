@@ -23,8 +23,12 @@
 				color: #fff;
 			}
 
-			.kaart-img-wrap.right {
+			.kaart-img-wrap.right-map {
 				justify-content: flex-start;
+			}
+
+			.kaart-img-wrap.left-map {
+
 			}
 
 			.kaart-img-wrap {
@@ -50,6 +54,7 @@
 				.material-icons.right { 
 					padding-right: 12px; 
 				}
+
 				.selected {
 
 				}
@@ -65,7 +70,7 @@
   			flex-direction: column;
   			align-content: space-between;
   			background-color: $conclusie-dimgray;
-			width: 350px;
+			width: 400px;
 			height: 100%;
 			padding: 12px;
 			margin: 91px 12px 0 12px;
@@ -121,6 +126,7 @@
 	}
 
 	.graph-container {
+		
 		#graph {
 			width:50%;
 			float:left;
@@ -129,12 +135,13 @@
 			width:50%;
 			float:right;
 		}
+		
 		#graph,#graph2 {
-			
-			svg {
-				width: 50%;
-			}
 
+			svg {
+				width: 100%;
+			}
+			
 			text {
 				fill: #fff;
 				text-transform: uppercase;

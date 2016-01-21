@@ -415,5 +415,50 @@ Meteor.subscribe('chartdata', function() {
 				}
 			]
 		})
+		Chartdata.insert({
+			name:"Woonwaarde",
+			gemWoonwaarde :[
+      {
+        "stadsdeel":"weteringenschans",
+        "waarde":4378.46
+      },
+      {
+        "stadsdeel":"westerlijke-eilanden",
+        "waarde":4132.12
+      },
+      {
+        "stadsdeel":"jordaan",
+        "waarde":4423.78
+      },
+      {
+        "stadsdeel":"grachtengordel-west",
+        "waarde":5136.38
+      },
+      {
+        "stadsdeel":"grachtengordel-zuid",
+        "waarde":4278.29
+      },
+      {
+        "stadsdeel":"plantage",
+        "waarde":3884.38
+      },
+      {
+        "stadsdeel":"burgwallen-nieuwe-zijde",
+        "waarde":3639.85
+      },
+      {
+        "stadsdeel":"oosterlijke-eilanden",
+        "waarde":2787.45
+      },
+      {
+        "stadsdeel":"nieuwmarkt",
+        "waarde":3829.85
+      },
+      {
+        "stadsdeel":"burgwallen-oost-zijde",
+        "waarde":3476.98
+      }
+    ]
+		})
 	};
 })

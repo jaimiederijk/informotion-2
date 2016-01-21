@@ -32,7 +32,7 @@
 				-webkit-appearance: none;
 			}
 			
-			.select-kaart-button {
+			.select-kaart-button-r, .select-kaart-button-l{
 				background-color: transparent;
 				color: #fff;
 				width: 100%;
@@ -48,6 +48,10 @@
 				margin: 0 auto;
 				text-align: center;
 				color: #fff;
+			}
+
+			option {
+				background-color:#3f3f3f;
 			}
 		}
 	}

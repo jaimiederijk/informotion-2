@@ -24,10 +24,12 @@ Template.kaartl.events({
 assignGraphColor = function (event) {
 	var target = event.currentTarget.classList[0],
 		chartColorsRed=mapColors.chartRed[target],//["#5B0000","#7C3333","#9D6666","#BE9999","#DECCCC"],
-		chartColorsBlue=mapColors.chartBlue[target];//["#001C5B","#33497B","#66779C","#99A4BD","#CCD2DE"]
+		chartColorsBlue=mapColors.chartBlue[target],
+		chartColorsGreen=mapColors.chartGreen[target];//["#001C5B","#33497B","#66779C","#99A4BD","#CCD2DE"]
 		//indexColorsBlue=["fill: rgb(0, 28, 91);","fill: rgb(51, 73, 123);","fill: rgb(102, 119, 156);","fill: rgb(190, 153, 153);","fill: rgb(222, 204, 204);"],
 		//indexColorsRed=["fill: rgb(91, 0, 0);","fill: rgb(124, 51, 51);","fill: rgb(157, 102, 102);","fill: rgb(153, 164, 189);","fill: rgb(204, 210, 222);"];
 	
 	$("#graph .graph_"+target).attr("fill",chartColorsBlue ).attr("style","fill:"+chartColorsBlue );
 	$("#graph2 .graph_"+target).attr("fill",chartColorsRed ).attr("style","fill:"+chartColorsRed );
+	$("#graph3 .graph_"+target).attr("fill",chartColorsGreen ).attr("style","fill:"+chartColorsGreen );
 }

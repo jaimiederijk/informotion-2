@@ -31,7 +31,7 @@ Template.graph.rendered = function() {
 				avgCityPart = avgCityPart/cityPartData.length;
 				avgData.push({"avg":avgCityPart,"name":part});
 			};
-
+			Session.set("graph1Data", avgData);
 		    //kaart kleuren["#CCD2DE","#99A4BD","#66779C","#33497B","#001C5B"]
 		    chartColors=mapColors.blue;//["#001C5B","#33497B","#66779C","#99A4BD","#CCD2DE"]
 		    for (var r = avgData.length - 1; r >= 0; r--) {

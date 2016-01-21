@@ -8,6 +8,8 @@ Template.kaart3.events({
 
 		$("."+event.currentTarget.classList[0]).attr("style", "fill-opacity: 1;")
 		assignGraphColor(event)
+		var stadsdeel = event.currentTarget.classList[0]
+		Session.set("stadsdeel3", stadsdeel);
 		//$(".graph_"+event.currentTarget.classList[0]).attr("style",$(event.currentTarget.firstElementChild.firstElementChild).attr('style') );
 		//$(".graph_"+event.currentTarget.id).attr("class", "selected");
 		//debugger

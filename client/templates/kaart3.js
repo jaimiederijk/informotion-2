@@ -1,3 +1,18 @@
+Template.kaart3.rendered = function() {
+  this.autorun(function() {
+ 	var dot = document.querySelectorAll('.third-map svg g circle');
+
+	var kaart = new TimelineMax()
+		.staggerFrom(dot , 0.006 , { 
+			scale:0 , 
+			transformOrigin: "left", 
+			ease: Power2.easeOut, 
+			y: 0},
+
+		0.006);
+  })
+};
+
 Template.kaart3.helpers({
 
 });

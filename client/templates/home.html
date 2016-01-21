@@ -1,7 +1,7 @@
 <template name="home">
 	<div class="home">
 		<div class="container">
-			{{> kaartl}}
+			{{> Template.dynamic template=whichOneLeft}}
 			<div class="conclusie-wrapper">
 				<div class="conclusie-tekst">
 					<h3 class="conclusie-titel">Deze website</h3>
@@ -14,11 +14,11 @@
 						<input class="grafiek-button" type="submit" value="Line chart">
 					</div>
 				</div>
-			{{> kaartr}}
+			{{> Template.dynamic template=whichOneRight}}
 		</div>
 		<div class="graph-container">
-			{{>graph}}
-			{{>graph2}}
+			{{>Template.dynamic template=whichGraphLeft}}
+			{{>Template.dynamic template=whichGraphRight}}
 		</div>
 	</div>
 </template>

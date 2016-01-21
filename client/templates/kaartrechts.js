@@ -24,7 +24,7 @@ Template.kaartr.events({
 		$("."+event.currentTarget.classList[0]).attr("style", "fill-opacity: 1;")
 		assignGraphColor(event)
 		var stadsdeel = event.currentTarget.classList[0]
-		Session.set("stadsdeelR", stadsdeel);
+		Session.set("stadsdeelL", stadsdeel);
 		//$(".graph_"+event.currentTarget.classList[0]).attr("style",$(event.currentTarget.firstElementChild.firstElementChild).attr('style') );
 		//$(".graph_"+event.currentTarget.id).attr("class", "selected");
 		//debugger

@@ -53,10 +53,10 @@ Template.home.helpers({
             avgData=cleanData[i].avg
           }
         };
-        return  "Gemiddeld vindt men dat " + stadsdeelL + " een " +avgData + " verdiend als het gaat om hoe schoon het is.";
+        return  "Gemiddeld vindt men dat " + stadsdeelL + " een " +Math.round(avgData * 100) / 100 + " verdiend als het gaat om hoe schoon het is.";
       } else if (links==="kaartr") {//airbnb
 
-        return stadsdeelR +"De gemiddelde airbnb prijs in dit gebied is" +Chartdata.findOne({name:"hotelData"}).hotelData[stadsdeelR][1].prijs
+        return stadsdeelR +" De gemiddelde airbnb prijs in dit gebied is " +Chartdata.findOne({name:"hotelData"}).hotelData[stadsdeelR][1].prijs
       } else if (links==="kaart3") {//woningwaarde
         var woonData;
         var cleanData=Chartdata.findOne({name:"Woonwaarde"}).gemWoonwaarde;
